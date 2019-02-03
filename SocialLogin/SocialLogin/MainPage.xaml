@@ -1,7 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SocialLogin" x:Class="SocialLogin.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:SocialLogin" 
+             x:Class="SocialLogin.MainPage"
+             BackgroundColor="#36454f">
+    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" 
+                 Margin="20">
+        <Button Text="Facebook" Image="facebook" Margin="3"
+                BackgroundColor="#3b5998" BorderRadius="3" 
+                TextColor="White" x:Name="FacebookButton"/>
+        <Button Text="Google" Image="google" Margin="3"
+                BackgroundColor="#FFFFFF" BorderRadius="3"
+                TextColor="Gray" x:Name="GoogleButton"/>
+        <Button Text="Twitter" Image="twitter" Margin="3"
+                BackgroundColor="#1DA1F2" BorderRadius="3"
+                TextColor="White" x:Name="TwitterButton"/>
     </StackLayout>
 </ContentPage>

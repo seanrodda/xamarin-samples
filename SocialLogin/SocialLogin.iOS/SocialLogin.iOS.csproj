@@ -13,6 +13,7 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>SocialLogin.iOS</AssemblyName>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -95,6 +96,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\SocialHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -140,15 +142,46 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\facebook.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\google.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\facebook.imageset\facebook.png" />
+    <ImageAsset Include="Assets.xcassets\facebook.imageset\facebook%402x.png" />
+    <ImageAsset Include="Assets.xcassets\facebook.imageset\facebook%403x.png" />
+    <ImageAsset Include="Assets.xcassets\google.imageset\google.png" />
+    <ImageAsset Include="Assets.xcassets\google.imageset\google%402x.png" />
+    <ImageAsset Include="Assets.xcassets\google.imageset\google%403x.png" />
+    <ImageAsset Include="Assets.xcassets\twitter.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\twitter.imageset\twitter.png" />
+    <ImageAsset Include="Assets.xcassets\twitter.imageset\twitter%402x.png" />
+    <ImageAsset Include="Assets.xcassets\twitter.imageset\twitter%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1029999" />
+    <PackageReference Include="Clancey.SimpleAuth">
+      <Version>1.0.49</Version>
+    </PackageReference>
+    <PackageReference Include="Clancey.SimpleAuth.Google.iOS">
+      <Version>1.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Clancey.SimpleAuth.Facebook.iOS">
+      <Version>1.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Assets.xcassets\facebook.imageset\" />
+    <Folder Include="Assets.xcassets\google.imageset\" />
+    <Folder Include="Assets.xcassets\twitter.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\SocialLogin\SocialLogin.projitems" Label="Shared" />
